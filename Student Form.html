@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEHS-Senior High School Student Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light grey background */
+        }
+        h1 {
+            color: #008000; /* Green text */
+        }
+        form {
+            background-color: #ffffcc; /* Yellow background for the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo-container">
+    <!-- Replace the following with the actual image tag for the NEHS-Senior High School logo -->
+    <img src="path/to/your/logo.png" alt="NEHS-Senior High School Logo">
+</div>
+
+<h1>NEHS-Senior High School Student Information Form</h1>
+
+<form id="studentForm">
+    <!-- ... (unchanged form fields) ... -->
+    <button type="button" onclick="saveData()">Save Data</button>
+</form>
+
+<script>
+    var studentsData = JSON.parse(localStorage.getItem('studentsData')) || [];
+
+    function saveData() {
+        var studentData = {
+            // ... (unchanged)
+        };
+
+        studentsData.push(studentData);
+        localStorage.setItem('studentsData', JSON.stringify(studentsData));
+        clearForm();
+    }
+
+    function clearForm() {
+        // ... (unchanged)
+    }
+
+    function downloadCSV() {
+        // ... (unchanged)
+    }
+</script>
+
+<button type="button" onclick="downloadCSV()">Download CSV</button>
+
+</body>
+</html>
